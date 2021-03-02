@@ -33,6 +33,9 @@ async def on_message(message):
     if message.content == "hi campbell":
         await message.channel.send("hello")
 
+    if message.content[:3].lower() == "fax":
+        await message.channel.send(file=discord.File("img/fax.png"))
+
     # Check for Prefix >
     if message.content[0:1] == ">":
         # Assign content after prefix to command string
