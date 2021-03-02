@@ -4,6 +4,12 @@ import discord
 # gets client object from discord.py
 bot = discord.Client()
 
+# Get discord token
+import os
+from dotenv import load_dotenv
+load_dotenv()
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+
 # How this works! (for future me)
 # utilizes discord.py
 # https://discordpy.readthedocs.io/en/latest/
@@ -45,4 +51,4 @@ def command_gif(tag):
     
 
 # execute bot with token
-bot.run("MzIwNzI4NTQ5OTY1Mjk5NzEz.WTNbvQ.WLuFJN2dQlp760eSAcxie04xPsg")
+bot.run(DISCORD_TOKEN)
