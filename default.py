@@ -45,15 +45,15 @@ async def on_message(message):
 
 def command_gif(tag):
     gifList = {
-        "general":          "img/general.GIF",
-        "gifs":             "img/gifs.GIF",
-        "milkwar":          "img/milkwar.GIF",
-        "minecraftserver":  "img/minecraftserver.GIF",
-        "minishield":       "img/minishield.GIF",
-        "mori":             "img/mori.GIF",
-        "stadia":           "img/stadia.GIF",
-        "weebwill":         "img/weebwill.GIF",
-        "ballsitch":        "img/ballsitch.GIF"
+        "general":          "img/general.gif",
+        "gifs":             "img/gifs.gif",
+        "milkwar":          "img/milkwar.gif",
+        "minecraftserver":  "img/minecraftserver.gif",
+        "minishield":       "img/minishield.gif",
+        "mori":             "img/mori.gif",
+        "stadia":           "img/stadia.gif",
+        "weebwill":         "img/weebwill.gif",
+        "ballsitch":        "img/ballsitch.gif"
     }
     error_message = "There is no gif with that name."
     return gifList.get(tag, error_message)
