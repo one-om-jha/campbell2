@@ -49,6 +49,5 @@ def command_gif(tag):
     error_message = "There is no gif with that name."
     return gifList.get(tag, error_message)
     
-
 # execute bot with token
 bot.run(DISCORD_TOKEN)
