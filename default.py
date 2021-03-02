@@ -39,20 +39,21 @@ async def on_message(message):
         command = message.content[1:]
 
         if command[:3] == "gif":
-            await message.channel.send(command_gif)
+            tag = command[4:]
+            await message.channel.send(file=discord.File(command_gif(tag)))
 
 
 def command_gif(tag):
     gifList = {
-        "general":          img/general.GIF,
-        "gifs":             img/gifs.GIF,
-        "milkwar":          img/milkwar.GIF,
-        "minecraftserver":  img/minecraftserver.GIF,
-        "minishield":       img/minishield.GIF,
-        "mori":             img/mori.GIF,
-        "stadia":           img/stadia.GIF,
-        "weebwill":         img/weebwill.GIF,
-        "ballsitch":        img/ballsitch.GIF
+        "general":          "img/general.GIF",
+        "gifs":             "img/gifs.GIF",
+        "milkwar":          "img/milkwar.GIF",
+        "minecraftserver":  "img/minecraftserver.GIF",
+        "minishield":       "img/minishield.GIF",
+        "mori":             "img/mori.GIF",
+        "stadia":           "img/stadia.GIF",
+        "weebwill":         "img/weebwill.GIF",
+        "ballsitch":        "img/ballsitch.GIF"
     }
     error_message = "There is no gif with that name."
     return gifList.get(tag, error_message)
