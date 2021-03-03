@@ -33,8 +33,10 @@ async def on_message(message):
     if message.content == "hi campbell":
         await message.channel.send("hello")
 
-    if "fax" in message.content:
-        await message.channel.send(file=discord.File("img/fax.png"))
+    if "fax" in message.content.lower():
+        num_fax = message.content.lower().count("fax")
+        for x in range(num_fax):
+            await message.channel.send(file=discord.File("img/fax.png"))
 
     # Check for Prefix >
     if message.content[0:1] == ">":
