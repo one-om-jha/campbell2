@@ -35,8 +35,13 @@ async def on_message(message):
 
     if "fax" in message.content.lower():
         num_fax = message.content.lower().count("fax")
+        if num_fax > 3:
+            num_fax = 3
         for x in range(num_fax):
             await message.channel.send(file=discord.File("img/fax.png"))
+    
+    if "this!" in message.content.lower():
+        await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/821394282677403658/Screenshot_20210310-215818_Snapchat.jpg")
 
     # Check for Prefix >
     if message.content[0:1] == ">":
@@ -47,6 +52,8 @@ async def on_message(message):
             tag = command[4:]
             await message.channel.send(file=discord.File(command_gif(tag)))
 
+        if "timezone" in command.lower():
+            await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/821089009484562482/pDzzgWlEvLJ70JqZCdD2ag4bN_qEUe_omW5dikF1K_4.png")
 
 def command_gif(tag):
     gifList = {
