@@ -43,6 +43,9 @@ async def on_message(message):
     if "this!" in message.content.lower():
         await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/821394282677403658/Screenshot_20210310-215818_Snapchat.jpg")
 
+    if "thisdge" in message.content.lower():
+        await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/822571054773174282/unknown.png")
+
     # Check for Prefix >
     if message.content[0:1] == ">":
         # Assign content after prefix to command string
