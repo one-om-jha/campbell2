@@ -34,29 +34,30 @@ async def on_message(message):
         await message.channel.send("hello")
 
     if "fax" in message.content.lower():
-        num_fax = message.content.lower().count("fax")
-        if num_fax > 3:
-            num_fax = 3
-        for x in range(num_fax):
-            await message.channel.send(file=discord.File("img/fax.png"))
-    
+        await message.add_reaction('<:this:823714994424250368>')
+
     if "this!" in message.content.lower():
-        await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/821394282677403658/Screenshot_20210310-215818_Snapchat.jpg")
+        await message.add_reaction('<:Fax:816331584999391262>')
 
     if "thisdge" in message.content.lower():
         await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/822571054773174282/unknown.png")
 
     # Check for Prefix >
-    if message.content[0:1] == ">":
+    if message.content[0:1] == "~":
         # Assign content after prefix to command string
         command = message.content[1:]
 
-        if command[:3] == "gif":
+        if "img" in command[:3]:
             tag = command[4:]
             await message.channel.send(file=discord.File(command_gif(tag)))
 
-        if "timezone" in command.lower():
-            await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/821089009484562482/pDzzgWlEvLJ70JqZCdD2ag4bN_qEUe_omW5dikF1K_4.png")
+        if "flex" in command[:4]:
+            reply = "{1} got caught flexing in {2} by {0}. Bitch.".format(message.author.mention, message.mentions[0].mention, message.guild.name)
+            await message.channel.send(reply)
+
+        if "sus" in command[:3]:
+            reply = "{0}, ayo son? wtf.".format(message.mentions[0].mention)
+            await message.channel.send(reply)
 
 def command_gif(tag):
     gifList = {
@@ -68,10 +69,11 @@ def command_gif(tag):
         "mori":             "img/mori.gif",
         "stadia":           "img/stadia.gif",
         "weebwill":         "img/weebwill.gif",
-        "ballsitch":        "img/ballsitch.gif"
+        "ballsitch":        "img/ballsitch.gif",
+        "timezone":         "https://cdn.discordapp.com/attachments/189827180610453505/821089009484562482/pDzzgWlEvLJ70JqZCdD2ag4bN_qEUe_omW5dikF1K_4.png"
     }
     error_message = "There is no gif with that name."
     return gifList.get(tag, error_message)
-    
+
 # execute bot with token
 bot.run(DISCORD_TOKEN)
