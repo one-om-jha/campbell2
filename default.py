@@ -47,7 +47,7 @@ async def on_message(message):
         # Assign content after prefix to command string
         command = message.content[1:]
 
-        if "img" in command[:3]:
+        if "img" in command[:3] or "gif" in command[:3]:
             tag = command[4:]
             await message.channel.send(file=discord.File(command_gif(tag)))
 
@@ -70,7 +70,7 @@ def command_gif(tag):
         "stadia":           "img/stadia.gif",
         "weebwill":         "img/weebwill.gif",
         "ballsitch":        "img/ballsitch.gif",
-        "timezone":         "https://cdn.discordapp.com/attachments/189827180610453505/821089009484562482/pDzzgWlEvLJ70JqZCdD2ag4bN_qEUe_omW5dikF1K_4.png"
+        "this":             "img/this.gif"
     }
     error_message = "There is no gif with that name."
     return gifList.get(tag, error_message)
