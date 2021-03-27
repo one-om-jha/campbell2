@@ -34,11 +34,11 @@ async def on_message(message):
         await message.channel.send("hello")
 
     if "fax" in message.content.lower():
-        await message.add_reaction('<:this:823714994424250368>')
-
-    if "this!" in message.content.lower():
         await message.add_reaction('<:Fax:816331584999391262>')
 
+    if "this!" in message.content.lower():
+        await message.add_reaction('<:this:823714994424250368>')
+    
     if "thisdge" in message.content.lower():
         await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/822571054773174282/unknown.png")
 
