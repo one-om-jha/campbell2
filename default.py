@@ -42,6 +42,16 @@ async def on_message(message):
     if "thisdge" in message.content.lower():
         await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/822571054773174282/unknown.png")
 
+# DaBaby
+    if message.channel.name == 'less-gooo' and ("le" not in message.content.lower() or "go" not in message.content.lower()):
+        await message.channel.send("Hi {0}, I noticed you posted a message without saying LESS GOOO in the designated channel.".format(message.author.mention))
+
+    if message.channel.name == 'dababy_discussion' and ("le" not in message.author.display_name.lower() or "go" not in message.author.display_name.lower())  and message.author != bot.user:
+        await message.channel.send("Hi {0}, I noticed your name does not comply with the dababy official discord naming rules. Please correct this obvous mistake.".format(message.author.mention))
+
+    if ("le" in message.content.lower() and "go" in message.content.lower()) or "dababy" in message.content.lower():
+        await message.add_reaction('<:dababy:827036898504736788>')
+
     # Check for Prefix >
     if message.content[0:1] == "~":
         # Assign content after prefix to command string
