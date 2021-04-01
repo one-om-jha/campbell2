@@ -22,6 +22,8 @@ DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 # returns Message object when message is detected
 # https://discordpy.readthedocs.io/en/latest/api.html#message
 
+dababy_reminders = []
+
 # Event Listener - Bot Online
 @bot.event
 async def on_ready():
@@ -43,10 +45,11 @@ async def on_message(message):
         await message.channel.send("https://cdn.discordapp.com/attachments/189827180610453505/822571054773174282/unknown.png")
 
 # DaBaby
-    if message.channel.name == 'less-gooo' and ("le" not in message.content.lower() or "go" not in message.content.lower()):
+    if message.channel.name == 'less-gooo' and ("le" not in message.content.lower() or "go" not in message.content.lower()) and not message.author.bot:
         await message.channel.send("Hi {0}, I noticed you posted a message without saying LESS GOOO in the designated channel.".format(message.author.mention))
 
-    if message.channel.name == 'dababy_discussion' and ("le" not in message.author.display_name.lower() or "go" not in message.author.display_name.lower())  and message.author != bot.user:
+    if message.channel.name == 'dababy_discussion' and and message.author.id not in dababy_reminders and ("le" not in message.author.display_name.lower() or "go" not in message.author.display_name.lower())  and message.author != bot.user:
+        dababy_reminders.append(message.author.id)
         await message.channel.send("Hi {0}, I noticed your name does not comply with the dababy official discord naming rules. Please correct this obvous mistake.".format(message.author.mention))
 
     if ("le" in message.content.lower() and "go" in message.content.lower()) or "dababy" in message.content.lower():
