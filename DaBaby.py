@@ -10,7 +10,6 @@ class DaBaby(commands.Cog):
 
     async def handle_messages(message: discord.Message):
         await DaBaby.less_gooo_chat(message)
-        await DaBaby.name_guidelines(message)
 
     async def less_gooo_chat(message: discord.Message):
         if message.channel.name == "less-gooo" and not message.author.bot:

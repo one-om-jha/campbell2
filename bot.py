@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix='~')
 import os
 from dotenv import load_dotenv
 load_dotenv()
-DISCORD_TOKEN = os.getenv("DISCORD_DEV_TOKEN")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 @bot.listen('on_message')
 async def abstractListener(message):
