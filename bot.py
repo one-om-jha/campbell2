@@ -9,6 +9,8 @@ import Gifs
 from Gifs import *
 import OneLiners
 from OneLiners import *
+import petty
+from petty import *
 
 # gets client object from discord.py
 bot = commands.Bot(command_prefix='~')
@@ -28,6 +30,7 @@ async def abstractListener(message):
 bot.add_cog(AbstractResponses(bot))
 bot.add_cog(Gifs(bot))
 bot.add_cog(OneLiners(bot))
+bot.add_cog(petty(bot))
 
 # execute bot with token
 bot.run(DISCORD_TOKEN)
