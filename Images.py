@@ -2,7 +2,8 @@ import discord
 from discord.ext import tasks, commands
 
 image_list = {
-        "timezone": "https://cdn.discordapp.com/attachments/189827180610453505/828661635504799790/Time_Zones.jpg" 
+        "timezone": "https://cdn.discordapp.com/attachments/189827180610453505/828661635504799790/Time_Zones.jpg",
+        "bitch":    "https://cdn.discordapp.com/attachments/189827180610453505/828983816144027648/image0.jpg"
         }
 
 class Images(commands.Cog):
