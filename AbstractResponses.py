@@ -32,5 +32,6 @@ react_list = {
         }
 
 reply_list = {
-        "thisdge":      "https://cdn.discordapp.com/attachments/189827180610453505/822571054773174282/unknown.png"
+        "thisdge":      "https://cdn.discordapp.com/attachments/189827180610453505/822571054773174282/unknown.png",
+        "salaander":    "salaander"
         }
