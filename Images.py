@@ -6,7 +6,9 @@ import random
 
 image_list = {
         "timezone": "https://cdn.discordapp.com/attachments/189827180610453505/828661635504799790/Time_Zones.jpg",
-        "bitch":    "https://cdn.discordapp.com/attachments/189827180610453505/828983816144027648/image0.jpg"
+        "bitch":    "https://cdn.discordapp.com/attachments/189827180610453505/828983816144027648/image0.jpg",
+        "ratio":    "https://cdn.discordapp.com/attachments/189827180610453505/829712330166108230/D7E51CD2-2758-4251-9F9A-6824143CDB9F.JPG",
+        "mugiwtf":  "https://cdn.discordapp.com/attachments/189827180610453505/829712550874185749/04F934DE-6F85-4DFB-88F8-7A629F2F77C7.JPG"
         }
 
 class Images(commands.Cog):
