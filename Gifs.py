@@ -2,7 +2,7 @@ import discord
 from discord.ext import tasks, commands
 
 gif_list = {
-        "general":      "img/general.gif",
+        "general":          "img/general.gif",
         "gifs":             "img/gifs.gif",
         "milkwar":          "img/milkwar.gif",
         "minecraftserver":  "img/minecraftserver.gif",
@@ -11,7 +11,8 @@ gif_list = {
         "stadia":           "img/stadia.gif",
         "weebwill":         "img/weebwill.gif",
         "ballsitch":        "img/ballsitch.gif",
-        "this":             "img/this.gif"
+        "this":             "img/this.gif",
+        "ryuuko":           "img/ryuuko.gif"
         }
 
 class Gifs(commands.Cog):
