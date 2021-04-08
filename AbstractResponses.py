@@ -29,7 +29,7 @@ react_list = {
         "this!":                "<:this:823714994424250368>",
         "fax":                  "<:Fax:816331584999391262>",
         "dababy":               "<:dababy:827036898504736788>",
-        "cactus":               ":cactus:"
+        "cactus":               "<:cactus:>"
         }
 
 reply_list = {
