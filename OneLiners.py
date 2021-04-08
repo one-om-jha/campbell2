@@ -15,7 +15,8 @@ class OneLiners(commands.Cog):
     async def sus(self, ctx):
         if ctx.message.reference:
             msg = await ctx.fetch_message(ctx.message.reference.message_id)
-            reply = "{msg.author.mention} ayo son? wtf."
+            mention = msg.author.mention
+            reply = "{0} ayo son? wtf.".format(mention)
             await ctx.send(reply)
         else:
             reply = "No referenced message found."
