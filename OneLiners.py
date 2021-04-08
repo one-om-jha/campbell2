@@ -12,6 +12,10 @@ class OneLiners(commands.Cog):
         await ctx.send(reply)
 
     @commands.command()
-    async def sus(self, ctx, mention: discord.Member):
-        reply = "{0.mention} ayo son? wtf.".format(mention)
-        await ctx.send(reply)
+    async def sus(self, ctx):
+        if ctx.message.reference:
+            msg = await ctx.fetch_message(ctx.message.reference.message_id)
+            reply = "{msg.author.mention} ayo son? wtf."
+            await ctx.send(reply)
+        else:
+            reply = "No referenced message found."
