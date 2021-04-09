@@ -48,3 +48,12 @@ class Images(commands.Cog):
                     return await ctx.send("Could not get file...")
                 data = io.BytesIO(await resp.read())
                 await ctx.send(file=discord.File(data, 'art.jpg'))
+
+    @commands.command()
+    async def cat(self, ctx):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://thiscatdoesnotexist.com') as resp:
+                if resp.status != 200:
+                    return await ctx.send("Could not get file...")
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'cat.jpg'))
