@@ -20,7 +20,7 @@ DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 @bot.listen('on_message')
 async def abstractListener(message):
     if not message.author.bot:
-        await AbstractResponses.handle_messages(message)
+        await AbstractResponses.AbstractResponses.handle_messages(message)
 
 # Register cogs
 bot.add_cog(AbstractResponses.AbstractResponses(bot))
