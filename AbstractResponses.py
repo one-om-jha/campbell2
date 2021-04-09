@@ -21,7 +21,7 @@ class AbstractResponses(commands.Cog):
     async def reactions(message):
         content = message.content.lower()
         for key in react_list:
-            if re.match(r'\b{key}\b', content):
+            if key in content.split():    
                 await message.add_reaction(react_list[key])
 
 react_list = {
