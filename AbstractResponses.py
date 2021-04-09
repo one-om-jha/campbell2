@@ -29,7 +29,7 @@ class AbstractResponses(commands.Cog):
     async def no(message):
         content = message.content.lower()
         if "no " in content or "no" in content[:2]:
-            await message.add_reaction(❤️)
+            await message.add_reaction("❤️")
 
 react_list = {
         "this!":                "<:this:823714994424250368>",
