@@ -25,12 +25,16 @@ class AbstractResponses(commands.Cog):
             if key in content:
                 await message.add_reaction(react_list[key])
 
+    async def no(message):
+        content = message.content.lower()
+        if "no " in content or "no" in content[:2]:
+            await message.add_reaction(❤️)
+
 react_list = {
         "this!":                "<:this:823714994424250368>",
         "fax":                  "<:Fax:816331584999391262>",
         "dababy":               "<:dababy:827036898504736788>",
         "cactus":               "🌵",
-        "no ":                   "❤️"
         }
 
 reply_list = {
