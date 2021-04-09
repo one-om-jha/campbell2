@@ -28,7 +28,7 @@ class AbstractResponses(commands.Cog):
 
     async def no(message):
         content = message.content.lower()
-        if "no " in content or "no" in content[:2]:
+        if "no " in content or " no" in content or "no" in content[:3]:
             await message.add_reaction("❤️")
 
 react_list = {
