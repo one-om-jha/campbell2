@@ -12,6 +12,7 @@ class AbstractResponses(commands.Cog):
     async def handle_messages(message):
         await AbstractResponses.replies(message)
         await AbstractResponses.reactions(message)
+        await AbstractResponses.no(message)
 
     async def replies(message):
         content = message.content.lower()
