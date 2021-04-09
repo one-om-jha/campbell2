@@ -4,13 +4,9 @@ from discord.ext import tasks, commands
 
 # import classes
 import AbstractResponses
-from AbstractResponses import *
 import Gifs
-from Gifs import *
 import OneLiners
-from OneLiners import *
 import Images
-from Images import *
 
 # gets client object from discord.py
 bot = commands.Bot(command_prefix='~')
@@ -27,10 +23,10 @@ async def abstractListener(message):
         await AbstractResponses.handle_messages(message)
 
 # Register cogs
-bot.add_cog(AbstractResponses(bot))
-bot.add_cog(Gifs(bot))
-bot.add_cog(OneLiners(bot))
-bot.add_cog(Images(bot))
+bot.add_cog(AbstractResponses.AbstractResponses(bot))
+bot.add_cog(Gifs.Gifs(bot))
+bot.add_cog(OneLiners.OneLiners(bot))
+bot.add_cog(Images.Images(bot))
 
 # execute bot with token
 bot.run(DISCORD_TOKEN)
