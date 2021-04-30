@@ -30,17 +30,6 @@ class Images(commands.Cog):
                 await ctx.send(file=discord.File(data, 'horse.jpg'))
 
     @commands.command()
-    async def waifu(self, ctx):
-        num = random.randint(1,99999)
-        url = "https://www.thiswaifudoesnotexist.net/example-{0}.jpg".format(num)
-        async with aiohttp.ClientSession() as session:
-            async with session.get(url) as resp:
-                if resp.status != 200:
-                    return await ctx.send("Could not get file...")
-                data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, 'waifu.jpg'))
-
-    @commands.command()
     async def art(self, ctx):
         async with aiohttp.ClientSession() as session:
             async with session.get('https://thisartworkdoesnotexist.com') as resp:
@@ -57,3 +46,15 @@ class Images(commands.Cog):
                     return await ctx.send("Could not get file...")
                 data = io.BytesIO(await resp.read())
                 await ctx.send(file=discord.File(data, 'cat.jpg'))
+
+    @commands.command()
+    async def waifu(self, ctx):
+        num = random.randint(1,99999)
+        url = "https://www.thiswaifudoesnotexist.net/example-{0}.jpg".format(num)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as resp:
+                if resp.status != 200:
+                    return await ctx.send("Could not get file...")
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'waifu.jpg'))
+
