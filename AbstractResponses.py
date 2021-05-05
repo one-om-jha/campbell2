@@ -36,5 +36,6 @@ reply_list = {
         "thisdge":      "https://cdn.discordapp.com/attachments/189827180610453505/822571054773174282/unknown.png",
         "salaander":    "salaander",
         "i cant quite find the words jaden, and i consider myself an erudite man,":   "what the actual fuck my son",
-        "yes ma'am":    "https://cdn.discordapp.com/attachments/431240474188316672/837663670674522132/Screenshot_20210427-170307_Snapchat.png"
+        "yes ma'am":    "https://cdn.discordapp.com/attachments/431240474188316672/837663670674522132/Screenshot_20210427-170307_Snapchat.png",
+        "what if my birthday cake is like a mcyt dnf basori knightxhornet septiplier hamilton": "what the actual fuck" 
         }
